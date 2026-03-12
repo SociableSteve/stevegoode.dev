@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Crimson_Text } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers";
 import { SkipLink, Header, Footer } from "@/components/layout";
@@ -54,6 +55,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PY3EVGCY64"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PY3EVGCY64');
+          `}
+        </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${crimsonText.variable}`}>
         <ThemeProvider>

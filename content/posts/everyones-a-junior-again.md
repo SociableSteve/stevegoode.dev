@@ -1,5 +1,5 @@
 ---
-title: "The Mass AI Learning Curve"
+title: "Everyone's a Junior Again"
 description: "AI is rolling out but people are struggling to keep up. Let's exam why."
 publishedAt: "2024-03-12"
 tags: ["AI", "Leadership", "Engineering"]
